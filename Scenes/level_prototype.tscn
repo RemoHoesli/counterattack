@@ -1,0 +1,699 @@
+[gd_scene format=3 uid="uid://jba46h7vra5t"]
+
+[ext_resource type="Script" uid="uid://hsagy2a6eipd" path="res://Scripts/level_prototype.gd" id="1_huxu5"]
+[ext_resource type="Texture2D" uid="uid://c0pcvv4qa57cl" path="res://Sprites/UI/Battlefield_002.png" id="2_q5os6"]
+[ext_resource type="Texture2D" uid="uid://dg7xmogqm08rf" path="res://Sprites/Enemy_normal.png" id="2_xlb4x"]
+[ext_resource type="Texture2D" uid="uid://c5yj38fghbr6u" path="res://Sprites/Player/Player_idle.png" id="3_6rh6l"]
+[ext_resource type="Texture2D" uid="uid://ce55kysvhkq3g" path="res://Sprites/UI/UI_ParryFX_0001.png" id="3_18gdl"]
+[ext_resource type="Texture2D" uid="uid://cxjj7h227lf3r" path="res://Sprites/UI/UI_ParryFX_0002.png" id="4_nxbt5"]
+[ext_resource type="Texture2D" uid="uid://cwpwbdsribwr0" path="res://Sprites/UI/UI_Button2.png" id="4_suahs"]
+[ext_resource type="Texture2D" uid="uid://vlvgjhuq2quv" path="res://Sprites/Enemy_damaged.png" id="4_txnhb"]
+[ext_resource type="Texture2D" uid="uid://bx2cjtthvju2d" path="res://Sprites/Player/Player_Counter.png" id="5_2t2r1"]
+[ext_resource type="Texture2D" uid="uid://dn6ctnmdog7u1" path="res://Sprites/UI/UI_ParryFX_0003.png" id="5_g5rbq"]
+[ext_resource type="Texture2D" uid="uid://bqxplto7cgg6m" path="res://Sprites/UI/UI_Button1.png" id="5_q5os6"]
+[ext_resource type="Texture2D" uid="uid://b0kic3wn7usrl" path="res://Sprites/Player/Player_Counter2_01.png" id="6_1ls5o"]
+[ext_resource type="Texture2D" uid="uid://dyvwjjlxcowmn" path="res://Sprites/UI/UI_ParryFX_0004.png" id="6_48ngc"]
+[ext_resource type="Texture2D" uid="uid://daosp86rh1rgf" path="res://Sprites/UI/UI_ParryFX_0005.png" id="7_7wyim"]
+[ext_resource type="Texture2D" uid="uid://wrfax8t2xoq2" path="res://Sprites/Player/Player_Counter2_02.png" id="7_hkcx0"]
+[ext_resource type="Texture2D" uid="uid://cs6topibxu2rf" path="res://Sprites/UI/UI_ParryFX_0006.png" id="8_cx7bp"]
+[ext_resource type="Texture2D" uid="uid://cyxordxokm5yh" path="res://Sprites/Player/Player_Counter2_03.png" id="8_suahs"]
+[ext_resource type="Texture2D" uid="uid://dx80rhjduvuym" path="res://Sprites/Player/Player_Counter2_04.png" id="9_q5os6"]
+[ext_resource type="Texture2D" uid="uid://d11dtaq5exs61" path="res://Sprites/UI/UI_ParryFX_0007.png" id="9_y6oj2"]
+[ext_resource type="Texture2D" uid="uid://da5gwjcyvaddy" path="res://Sprites/UI/UI_ParryFX_0008.png" id="10_7kysd"]
+[ext_resource type="Texture2D" uid="uid://krwcvieikoox" path="res://Sprites/Player/Player_Counter2_05.png" id="10_pk1bp"]
+[ext_resource type="Texture2D" uid="uid://njbbt0wyq52p" path="res://Sprites/Player/Player_Counter2_06.png" id="11_n7sju"]
+[ext_resource type="Texture2D" uid="uid://b0kpn3b76aaxr" path="res://Sprites/Player/Player_Counter2_07.png" id="12_mk2cr"]
+[ext_resource type="Texture2D" uid="uid://cl88kleokf0j6" path="res://Sprites/UI/UI_HitFX_0001.png" id="13_7kysd"]
+[ext_resource type="Texture2D" uid="uid://jpu7xocuu65c" path="res://Sprites/Player/Player_Counter2_08.png" id="13_efbjp"]
+[ext_resource type="Texture2D" uid="uid://7ru8jprpqblj" path="res://Sprites/Player/Player_hurt.png" id="14_aj7b6"]
+[ext_resource type="Texture2D" uid="uid://boj76xmod10js" path="res://Sprites/UI/UI_HitFX_0002.png" id="14_u2dwi"]
+[ext_resource type="Texture2D" uid="uid://dkkujmh8bqlt8" path="res://Sprites/Player/Player_Parry.png" id="15_o5g1a"]
+[ext_resource type="Texture2D" uid="uid://de2lbs3i3f4d5" path="res://Sprites/UI/UI_HitFX_0003.png" id="15_t7rn4"]
+[ext_resource type="FontFile" uid="uid://u20e33y5rwcp" path="res://UI/Jua-Regular.ttf" id="16_1ls5o"]
+[ext_resource type="Texture2D" uid="uid://dpn0x15040ouj" path="res://Sprites/UI/UI_HitFX_0004.png" id="16_qr5h4"]
+[ext_resource type="Texture2D" uid="uid://ch4hbrjuaatnv" path="res://Sprites/UI/UI_HitFX_0005.png" id="17_dqiyr"]
+[ext_resource type="Texture2D" uid="uid://cyldeabgpeqfj" path="res://Sprites/UI/UI_HitFX_0006.png" id="18_65rpy"]
+[ext_resource type="Texture2D" uid="uid://dso42rscmin8u" path="res://Sprites/UI/UI_HitFX_0007.png" id="19_h54br"]
+[ext_resource type="Script" uid="uid://csimonmomlvvq" path="res://Scripts/Camera2D.gd" id="35_u2dwi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvqi6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_18gdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nxbt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g5rbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_48ngc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7wyim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cx7bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_y6oj2")
+}, {
+"duration": 0.3,
+"texture": ExtResource("10_7kysd")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2p5be"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7kysd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_u2dwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_t7rn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qr5h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dqiyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_65rpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_h54br")
+}, {
+"duration": 0.1,
+"texture": null
+}],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="Animation" id="Animation_3o3oo"]
+resource_name = "Anim_EnemyAttack"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy_Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 0),
+"points": PackedFloat32Array(1031, -0.25, 0, 0.7, 308.7616, 281.52505, -0.53333336, 15.627106, 0.14997569, -4.394411, 354.78757, -0.03327202, -28.438553, 0.13333344, 113.96393, 1031, -0.16666663, -33.13025, 0, 0),
+"times": PackedFloat32Array(0, 1.1, 1.4333333, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Enemy_Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(363, -0.25, 0, 0.25, 0, 363, -0.18333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/ActionCommandButton:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.85, 1.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [ExtResource("4_suahs"), ExtResource("5_q5os6")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/ActionCommandButton/ActionCommandLabel:text")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.85, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": ["", "Parry!", ""]
+}
+
+[sub_resource type="Animation" id="Animation_m4skb"]
+resource_name = "Anim_EnemyCountered"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy_Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 0),
+"points": PackedFloat32Array(350, -0.18333334, 0, 0.06666667, 47.551636, 400, -0.18333334, 0, 0.15, 0, 500.973, -0.03424423, -20.939066, 0.100000024, 61.14627, 1013, -0.13333333, -57.79773, 0, 0),
+"times": PackedFloat32Array(0, 0.26666668, 0.7, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Enemy_Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(363, -0.25, 0, 0.25, 0, 363, -0.18333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Enemy_Sprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_txnhb"), ExtResource("2_xlb4x")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/ActionCommandButton:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.35, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [ExtResource("4_suahs"), ExtResource("5_q5os6")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/ActionCommandButton/ActionCommandLabel:text")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.6494349),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": ["", "Counter!!", ""]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitFX:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(350, 369)]
+}
+
+[sub_resource type="Animation" id="Animation_hoj0l"]
+resource_name = "Anim_EnemyCountered2"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy_Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2, 0),
+"points": PackedFloat32Array(400, -0.039437212, 0.4843166, 0.016118348, -0.1979446, 678.527, -0.04970182, -26.757866, 0.11696485, 62.97012, 931.591, -0.06710291, -31.98128, 0.049861938, 23.764225, 1002.53, -0.025211325, -6.8603716, 0.024650615, 6.707794, 1010.3376, -0.00994575, -0.70405084, 0.014704864, 1.0409443, 1013, -0.3, -9.010132, 0, 0),
+"times": PackedFloat32Array(0, 0.29821092, 0.7008284, 0.8520963, 0.9117708, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Enemy_Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0, 2, 0, 2, 2),
+"points": PackedFloat32Array(363, -0.25, 0, 0.033333335, -75.44418, 150, -0.16491151, -0.47174907, 0.16845575, 0.48188782, 363, -0.051269755, -53.25, 0.035594523, -47.601013, 285.41406, -0.09527993, -0.3698685, 0.10472274, 0.40652466, 363.58902, -0.027782202, -19.276001, 0.028531492, -17.134186, 334.67502, -0.03813517, 1.0708923, 0.031367615, -0.8808494, 363.589, -0.027782202, -3.694519, 0, 0),
+"times": PackedFloat32Array(0, 0.29821092, 0.50328994, 0.6666667, 0.8333333, 0.9, 1)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Enemy_Sprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_txnhb"), ExtResource("2_xlb4x")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitFX:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(350, 280)]
+}
+
+[sub_resource type="Animation" id="Animation_hx1rs"]
+resource_name = "Anim_EnemyParried"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy_Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0),
+"points": PackedFloat32Array(350, -0.18333334, 0, 0.13333334, 3.0543823, 382.4752, -0.13333336, -29.420807, 0.14643876, 32.312595, 1013, -0.16666663, -33.13025, 0, 0),
+"times": PackedFloat32Array(0, 0.6, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Enemy_Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(363, -0.25, 0, 0.25, 0, 363, -0.18333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 1.1)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Enemy_Sprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_txnhb"), ExtResource("2_xlb4x")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/ActionCommandButton:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [ExtResource("4_suahs"), ExtResource("5_q5os6")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/ActionCommandButton/ActionCommandLabel:text")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["Counter!", ""]
+}
+
+[sub_resource type="Animation" id="Animation_qrbpa"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy_Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1031, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Enemy_Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(363, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Enemy_Sprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_xlb4x")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/ActionCommandButton:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_q5os6")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/ActionCommandButton/ActionCommandLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4vdp0"]
+_data = {
+&"Anim_EnemyAttack": SubResource("Animation_3o3oo"),
+&"Anim_EnemyCountered": SubResource("Animation_m4skb"),
+&"Anim_EnemyCountered2": SubResource("Animation_hoj0l"),
+&"Anim_EnemyParried": SubResource("Animation_hx1rs"),
+&"RESET": SubResource("Animation_qrbpa")
+}
+
+[sub_resource type="Animation" id="Animation_rvlnx"]
+resource_name = "Anim_PlayerCounter"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("5_2t2r1"), ExtResource("3_6rh6l")]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite2D:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0, 0),
+"points": PackedFloat32Array(245, -0.075, 0, 0.033333335, 71.46991, 300, -0.0033333334, 0, 0.021666668, 0, 300, -0.0033333334, 0, 0.021666668, 0, 245, -0.025000002, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.02, 0.3, 0.6)
+}
+
+[sub_resource type="Animation" id="Animation_18gdl"]
+resource_name = "Anim_PlayerCounter2"
+length = 1.0000033
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.26666668, 0.4, 0.5333333, 0.6333334, 0.8333333, 0.8999999, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [ExtResource("6_1ls5o"), ExtResource("7_hkcx0"), ExtResource("8_suahs"), ExtResource("9_q5os6"), ExtResource("10_pk1bp"), ExtResource("11_n7sju"), ExtResource("12_mk2cr"), ExtResource("13_efbjp"), ExtResource("3_6rh6l")]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite2D:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 0),
+"points": PackedFloat32Array(245, 0, 0, 0.0033333334, 9.166667, 290, -0.19986366, 6.808223, 0.19999999, -6.812866, 205, -0.11665, 17.832508, 1.66893e-05, -0.0025513251, 245, -0.10000348, -1.5857086, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.9999, 1.0000001)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Sprite2D:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(2, 0, 2, 0),
+"points": PackedFloat32Array(359, 0, 133.01538, 0, -39.85974, 150, -0.43333328, -4.087722, 0.4333334, 4.087723, 341, -0.083316654, -34.826355, 1.66893e-05, 0.0069761267, 359, -0.0333333, -89.69684, 0.032491148, 13.858551),
+"times": PackedFloat32Array(0, 0.50000006, 0.9999, 1.0000001)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player_Sprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8332666, 0.8333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.6, 0.6), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_nxbt5"]
+resource_name = "Anim_PlayerHurt"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("14_aj7b6")]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite2D:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2, 2, 2),
+"points": PackedFloat32Array(245, -0.075, 0, 0.033333335, 71.46991, 300, -0.0033333334, 0, 0.021666668, 0, 220, -0.0033333334, 1.4102564, 0.018333334, -7.7564106, 260, -0.0033339697, -1.0608084, 0.014999365, 4.772525, 235, -0.0033326969, 0.55547297, 0.011666669, -1.944527, 250, -0.0033333339, -0.4761905, 0.008333335, 1.1904763, 245, -0.025000002, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.02, 0.04, 0.060003817, 0.08, 0.1, 0.15)
+}
+
+[sub_resource type="Animation" id="Animation_6rh6l"]
+resource_name = "Anim_PlayerParry"
+length = 0.16666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_o5g1a")]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite2D:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(245, -0.075, 0, 0, 8.845779, 255, 0, 0.35359192, 0.021666668, 0, 255, -0.0033333334, 0, 0.021666668, 0, 245, -0.025000002, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.033333335, 0.13333334, 0.16666667)
+}
+
+[sub_resource type="Animation" id="Animation_txnhb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_6rh6l")]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite2D:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(245, -0.075, 0, 0.075, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Sprite2D:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(359, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player_Sprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3o3oo"]
+_data = {
+&"Anim_PlayerCounter": SubResource("Animation_rvlnx"),
+&"Anim_PlayerCounter2": SubResource("Animation_18gdl"),
+&"Anim_PlayerHurt": SubResource("Animation_nxbt5"),
+&"Anim_PlayerParry": SubResource("Animation_6rh6l"),
+&"RESET": SubResource("Animation_txnhb")
+}
+
+[node name="Level_Prototype" type="Node2D" unique_id=1037723484]
+script = ExtResource("1_huxu5")
+
+[node name="Battlefield002" type="Sprite2D" parent="." unique_id=775828419]
+position = Vector2(640, 360)
+texture = ExtResource("2_q5os6")
+
+[node name="ParryTimer" type="Timer" parent="." unique_id=554507403]
+wait_time = 1.1
+one_shot = true
+
+[node name="FirstCounterTimer" type="Timer" parent="." unique_id=304205667]
+wait_time = 0.5
+one_shot = true
+
+[node name="SecondCounterTimer" type="Timer" parent="." unique_id=928512327]
+wait_time = 0.6
+one_shot = true
+
+[node name="ParryFX" type="AnimatedSprite2D" parent="." unique_id=210898020]
+position = Vector2(201, 335)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_gvqi6")
+
+[node name="Enemy_Sprite2D" type="Sprite2D" parent="." unique_id=436480557]
+position = Vector2(1031, 363)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xlb4x")
+
+[node name="Player_Sprite2D" type="Sprite2D" parent="." unique_id=291419678]
+position = Vector2(245, 359)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6rh6l")
+
+[node name="HitFX" type="AnimatedSprite2D" parent="." unique_id=348093154]
+position = Vector2(350, 280)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_2p5be")
+
+[node name="EnemyAnimationPlayer" type="AnimationPlayer" parent="." unique_id=935346745]
+libraries/ = SubResource("AnimationLibrary_4vdp0")
+
+[node name="PlayerAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1649729685]
+libraries/ = SubResource("AnimationLibrary_3o3oo")
+
+[node name="Control" type="Control" parent="." unique_id=571969375]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Label" type="Label" parent="Control" unique_id=50194396]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -97.5
+offset_top = 80.0
+offset_right = 97.5
+offset_bottom = 170.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("16_1ls5o")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+
+[node name="ActionCommandButton" type="Sprite2D" parent="Control" unique_id=1755589612]
+position = Vector2(174, 123)
+texture = ExtResource("5_q5os6")
+
+[node name="ActionCommandLabel" type="Label" parent="Control/ActionCommandButton" unique_id=926301403]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.5
+offset_top = -63.0
+offset_right = 47.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("16_1ls5o")
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1011952472]
+anchor_mode = 0
+script = ExtResource("35_u2dwi")
+
+[connection signal="timeout" from="ParryTimer" to="." method="_on_parry_timer_timeout"]
+[connection signal="timeout" from="FirstCounterTimer" to="." method="_on_first_counter_timer_timeout"]
+[connection signal="timeout" from="SecondCounterTimer" to="." method="_on_second_counter_timer_timeout"]
+[connection signal="animation_finished" from="PlayerAnimationPlayer" to="." method="_on_player_animation_player_animation_finished"]
