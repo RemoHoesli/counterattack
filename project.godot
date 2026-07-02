@@ -13,14 +13,15 @@ config_version=5
 config/name="Counterattack"
 run/main_scene="uid://jba46h7vra5t"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.44705883, 0.2627451, 0.5921569, 1)
+boot_splash/image="uid://dhrywfg16h5eh"
+config/icon="uid://dg5mouwq3ts3l"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
 
 [input]
 
@@ -40,3 +41,4 @@ common/physics_ticks_per_second=120
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.44705883, 0.2627451, 0.5921569, 1)
